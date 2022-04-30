@@ -45,7 +45,7 @@ Calcular una suma puede ser tan simple como iterar sobre un array y sumar cada u
 Implemente la función denominada sumNumbers que toma un array de números como argumento y devuelve la suma de todos los números de la matriz. 
 
 Puedes usar este array para probar tu función: */
-const numbers = [1, 2, 3, 5, 45, 37, 58];
+let numbers = [1, 2, 3, 5, 45, 37, 58];
 
 function sumAll(param) {
 let sumaTotal = 0;
@@ -53,5 +53,21 @@ let sumaTotal = 0;
      sumaTotal += number;
  }
  console.log('La suma total es', sumaTotal);}
- 
+
 sumAll(numbers);
+/* 
+**Iteración #4: Calcular el promedio**
+
+Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función: */
+
+numbers = [12, 21, 38, 5, 45, 37, 6];
+function average(param) {
+let promedio = 0;
+ for ( number of param) {
+     promedio += number;
+ }
+ promedio /= param.length;
+
+ console.log('El promedio es', promedio);}
+  
+average(numbers);
