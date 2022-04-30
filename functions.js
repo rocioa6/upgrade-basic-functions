@@ -118,3 +118,30 @@ function removeDuplicates(param) {
   console.log('Lista sin duplicados', filteredArray);
 }
 removeDuplicates(duplicates);
+
+/* **Iteración #7: Buscador de nombres**
+
+Crea una función que reciba por parámetro un array y el valor que desea comprobar que existe dentro de dicho array - comprueba si existe el elemento, en caso que existan nos devuelve un true y la posición de dicho elemento y por la contra un false. Puedes usar este array para probar tu función: */
+const nameFinder = [
+    'Peter',
+    'Steve',
+    'Tony',
+    'Natasha',
+    'Clint',
+    'Logan',
+    'Xabier',
+    'Bruce',
+    'Peggy',
+    'Jessica',
+    'Marc'
+  ];
+  function finderName(param, findElement) {
+    if (param.includes(findElement)) {
+        console.log('¿Existe',  findElement,  'en la lista? ==>', param.includes(findElement), 'y su indice es', param.indexOf(findElement));
+    }
+    else {
+        console.log('¿Existe',  findElement,  'en la lista? ==>', param.includes(findElement));
+    }
+  }
+  finderName(nameFinder, 'Pepe');
+  finderName(nameFinder, 'Peter');
