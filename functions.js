@@ -29,12 +29,12 @@ const avengers = [
 
 function findLongestWord(param) {
   let LongestWord = "";
-  for(let i = 0; i < param.length; i++) {
-      if(param[i].length > LongestWord.length){
-          LongestWord = param[i];  
-      }
+  for (let i = 0; i < param.length; i++) {
+    if (param[i].length > LongestWord.length) {
+      LongestWord = param[i];
+    }
   }
-  console.log('La palabra más larga es', LongestWord);
+  console.log("La palabra más larga es", LongestWord);
 }
 
 findLongestWord(avengers);
@@ -48,11 +48,12 @@ Puedes usar este array para probar tu función: */
 let numbers = [1, 2, 3, 5, 45, 37, 58];
 
 function sumAll(param) {
-let sumaTotal = 0;
- for (const number of param) {
-     sumaTotal += number;
- }
- console.log('La suma total es', sumaTotal);}
+  let sumaTotal = 0;
+  for (const number of param) {
+    sumaTotal += number;
+  }
+  console.log("La suma total es", sumaTotal);
+}
 
 sumAll(numbers);
 /* 
@@ -62,12 +63,31 @@ Calcular un promedio es una tarea extremadamente común. Puedes usar este array 
 
 numbers = [12, 21, 38, 5, 45, 37, 6];
 function average(param) {
-let promedio = 0;
- for ( number of param) {
-     promedio += number;
- }
- promedio /= param.length;
+  let promedio = 0;
+  for (number of param) {
+    promedio += number;
+  }
+  promedio /= param.length;
 
- console.log('El promedio es', promedio);}
-  
+  console.log("El promedio es", promedio);
+}
+
 average(numbers);
+
+/* **Iteración #5: Calcular promedio de strings**
+
+Crea una función que reciba por parámetro un array y cuando es un valor number lo sume y de lo contrario cuente la longitud del string y lo sume. Puedes usar este array para probar tu función: */
+const mixedElements = [6, 1, "Rayo", 1, "vallecano", "10", "upgrade", 8, "hub"];
+function averageWord(param) {
+  let sumatorio = 0;
+  param.forEach(function (element) {
+    if (typeof element === "number") {
+      sumatorio += element;
+    } else if (typeof element === "string") {
+      sumatorio += element.length;
+    }
+  });
+  console.log('El promedio de elementos es', sumatorio);
+}
+
+averageWord(mixedElements);
