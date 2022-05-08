@@ -173,10 +173,22 @@ const counterWords = [
   "upgrade",
   "code",
 ];
-function repeatCounter(param) {
- const resultado = {};
-  for (const el of param) 
-  resultado[el] = resultado[el] + 1 || 1;
-  console.log(resultado);
+//solucion con array asociativo
+/* function repeatCounter(param) {
+  const resultado = {};
+   for (const el of param) 
+   resultado[el] = resultado[el] + 1 || 1;
+   console.log(resultado);
+ }
+ repeatCounter(counterWords);  */
+
+function repeatCounter(param, count) {
+  let counter = 0;
+  param.forEach(function (element) {
+    if (element === count) {
+      counter++;
+    }
+  });
+  console.log(`${count} se repite ${counter} veces`);
 }
-repeatCounter(counterWords);
+repeatCounter(counterWords, "code");
